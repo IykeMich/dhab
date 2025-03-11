@@ -1,6 +1,7 @@
 import Chef from "./components/Chef";
 import Customers from "./components/Customers";
 import Dishes from "./components/Dishes";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Dishes />
       <Chef />
       <Customers />
+      <Footer />
     </main>
     
   );

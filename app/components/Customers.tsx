@@ -32,7 +32,7 @@ export default function Customers() {
                     </div>
                 </div>
             </div>
-            <div className="card w-full flex flex-col items-center md:mx-auto">
+            <div className="card w-full flex flex-col items-center md:mx-0 lg:mx-auto">
                 <Carousel plugins={[plugin.current]}
                     onMouseEnter={plugin.current.stop}
                     onMouseLeave={plugin.current.reset} className="w-full max-w-sm md:max-w-lg lg:max-w-full">
