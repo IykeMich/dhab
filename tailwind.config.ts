@@ -11,7 +11,7 @@ const config: Config = {
   	extend: {
 		screens: {
 			'lg2': '1280px', // Custom breakpoint
-			'xl2': '1536px', // Custom breakpoint
+			'xl2': '1440px', // Custom breakpoint
 		  },
   		colors: {
   			background: 'hsl(var(--background))',

@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import Image from 'next/image'
 import React from 'react'
 
@@ -43,6 +44,31 @@ export default function Dishes() {
                 </div>
             ))}
                 
+            </div>
+            <div className="welcomeSection overflow-hidden md:mx-12 lg:mx-24 flex flex-col-reverse md:flex-row justify-between items-center pt-12">
+                <div className="Image-sectionq w-full md:w-1/2">
+                    <Image src="/images/dishes/welcomeSalad.svg" alt='Special Salad' width={200} height={200}
+                    className='w-full h-full'/>
+                </div>
+                <div className="text text-center flex flex-col justify-center w-full md:w-1/2">
+                    <div className="text-2xl lg:text-4xl font-semibold leading-snug pb-4 lg:pb-8">
+                        <h1>Welcome to our</h1>
+                        <h1><span className='text-[#DAE952]'>Dhabi</span> Restaurant</h1>       
+                    </div>
+                    <div className="longer-text">
+                        <p className='text-xs lg:text-base font-normal leading-tight tracking-tight'>
+                        food, substance consisting essentially of protein, carbohydrate, fat, 
+                        and other nutrients used in the body of an organism to sustain growth and vital 
+                        processes and to furnish energy. The absorption and utilization of food by the body is 
+                        fundamental to nutrition and is facilitated by digestion 
+                        </p>
+                    </div>
+                    <div className="mt-6">
+                        <Button className="p-4 text-medium text-black bg-[#DAE952] hover:bg-black hover:text-white transition-all duration-100 ease-in rounded-2xl">
+                        Find for more
+                        </Button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
