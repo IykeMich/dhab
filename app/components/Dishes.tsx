@@ -11,7 +11,11 @@ export default function Dishes() {
     ];
   return (
     <>
-    <main className="bg-[#DAE952]/20 w-full">
+    <main className="bg-[#DAE952]/20 w-full overflow-hidden">
+        <div className="absolute">
+            <Image src="/images/leaf1.svg" alt="basket" width={300} height={200} 
+            className='object-cover  md:w-[74vw] md:h-[100vh] relative -top-32 -left-[6rem] md:-left-[20rem]'/>
+        </div>
         <div className="mx-8 py-8">
             <div className=" header text-center">
                 <h1 className="text-4xl font-normal">Our Delicious and Special Salad</h1>
@@ -50,6 +54,10 @@ export default function Dishes() {
                     <Image src="/images/dishes/welcomeSalad.svg" alt='Special Salad' width={200} height={200}
                     className='w-full h-full'/>
                 </div>
+                <div className="absolute">
+                    <Image src="/images/leaf2.svg" alt="basket" width={300} height={200} 
+                    className='object-cover  md:w-[50vw] md:h-[80vh] relative -bottom-48 md:-bottom-0 md:-right-[24rem]'/>
+                </div>
                 <div className="text text-center flex flex-col justify-center w-full md:w-1/2">
                     <div className="text-2xl lg:text-4xl font-semibold leading-snug pb-4 lg:pb-8">
                         <h1>Welcome to our</h1>
@@ -70,6 +78,7 @@ export default function Dishes() {
                     </div>
                 </div>
             </div>
+                
         </div>
     </main>
       

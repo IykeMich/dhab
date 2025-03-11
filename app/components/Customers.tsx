@@ -13,6 +13,10 @@ export default function Customers() {
   return (
     <>
      <main className='bg-[#DAE952]/20 w-full' >
+            <div className="absolute w-full">
+                <Image src="/images/bgCustomers.svg" alt="basket" width={300} height={200} 
+                className='object-cover  md:w-[35vw] md:h-[50vh] relative top-20 md:-right-10'/>
+            </div>
         <div className="p-8">
             <div className="title pb-12">
                 <div className="text text-center flex flex-col justify-center w-full">

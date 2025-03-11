@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ContactRoundIcon, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import { RiShoppingBasket2Line, RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import Link from "next/link";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,8 +35,8 @@ export default function Header() {
         </div>
 
         {/* Navbar */}
-        <div className="nav_sector w-full h-12 z-50 absolute top-0 left-0 px-4 md:px-8">
-          <div className="nav_setup flex justify-between items-center pt-3 md:py-12 xl:py-8 mx-4 xl:mx-8 space-x-4 xl:space-x-8">
+        <div className="nav_sector w-full h-12 z-50 absolute top-0 left-0 px-2 md:px-8">
+          <div className="nav_setup flex justify-between items-center pt-3 md:py-6 xl:py-8 mx-4 xl:mx-8 space-x-4 xl:space-x-8">
             {/* Logo Section */}
             <div className="flex items-center space-x-4">
               <Image src="/images/brandLogo.svg" alt="Logo" width={30} height={50} />
@@ -75,22 +76,29 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-start pl-4 space-y-6 pt-24 transition-all duration-300 ${
+          className={`absolute top-0 left-0 w-full h-screen bg-white flex flex-col pl-8 items-start space-y-3 pt-20 transition-all duration-300 ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
           } md:hidden`}
         >
           {navLinks.map((nav) => (
-            <h4 key={nav} className="text-lg font-medium text-black cursor-pointer hover:text-gray-700">
+            <h4 key={nav} className="text-base font-medium text-black cursor-pointer hover:text-gray-700">
               {nav}
             </h4>
           ))}
-          <Button className="text-black bg-[#DAE952] hover:text-white hover:bg-black transition-all duration-300 ease-in text-lg font-semibold">
+          <Button className="text-black bg-[#DAE952] !p-2 hover:text-white hover:bg-black transition-all duration-300 ease-in text-base font-semibold">
             Special Offer
           </Button>
-          <h4 className="text-lg flex text-black items-center">
-            <PhoneCall className="w-6 h-6 mr-2" />
-            <span>+2349039374531</span>
+          <h4 className="text-sm flex text-black items-center">
+            <PhoneCall className="w-4 h-4 mr-2" />
+            <span>
+            <Link href="https://wa.me/+2349039374531" target="_blank" rel="noopener noreferrer" className=" hover:underline">
+            +2349039374531 </Link>   
+            </span>
           </h4>
+          <div className="my-4 pb-8 flex space-x-6 items-center">
+          <ContactRoundIcon className="w-5  cursor-pointer" />
+          <RiShoppingBasket2Line className="w-5  cursor-pointer" />
+          </div>
         </div>
 
         {/* Hero Section */}
